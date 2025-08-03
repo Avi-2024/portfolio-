@@ -35,3 +35,11 @@ window.onscroll = () =>{
     header.classList.toggle('sticky', window.scrollY > 100);
 };
 
+// Close navbar when a nav link is clicked (for mobile)
+navlinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
